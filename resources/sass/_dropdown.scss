@@ -1,0 +1,12 @@
+.dropdown-menu {
+    padding: 6px;
+
+    .dropdown-item {
+        border-radius: 4px;
+        margin-bottom: 4px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
