@@ -4,6 +4,7 @@ import Example from "./Example";
 import Example2 from "./Example2";
 import Error404 from "./Error404";
 import Page from "./Page";
+import ChildExample from "./ChildExample";
 const routes = [
     {
         path: "/",
@@ -19,7 +20,14 @@ const routes = [
             {
                 path: "example-2",
                 component: Example2,
-                title: "Example 2"
+                title: "Example 2",
+                children: [
+                    {
+                        path: "smaller-example",
+                        component: ChildExample,
+                        title: "Example 3"
+                    }
+                ]
             }
         ]
     }
@@ -47,7 +55,11 @@ export const menu = [
         name: "Example 2",
         icon: "book"
     },
-    
+    {
+        path: "/example-2/smaller-example",
+        name: "Example 3",
+        icon: "book"
+    },
 ]
 
 export default function AppRouter() {
