@@ -15,23 +15,35 @@
 
 #app {
     height: 100vh;
+}
+
+#app-container {
+    height: 100%;
     overflow: hidden;
-    display: grid; 
-    grid-template-columns: 200px 1fr; 
-    grid-template-rows: 50px 1fr; 
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 50px 1fr;
     gap: 0px 0px;
-    grid-template-areas: 
+    grid-template-areas:
       "header header"
-      "sidebar content"; 
+      "sidebar content";
+
+    &.compact-sidebar {
+        grid-template-columns: 0px 1fr;
+
+    }
 }
 .header { grid-area: header; }
+
 .sidebar {
     grid-area: sidebar;
     overflow-y: auto;
+    // transition: all ease-in-out 0.4s;
 }
 .content {
     grid-area: content;
     overflow-y: auto;
     padding: 1rem;
     display: flex;
+    // transition: all ease-in-out 0.4s;
 }

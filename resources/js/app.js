@@ -13,11 +13,13 @@ require('./bootstrap');
  */
 
 import { render } from 'react-dom';
-import { HashRouter } from 'react-router-dom';
 import AppRouter from "./components/Router";
+import { RecoilRoot } from 'recoil';
 
 const appElement = document.getElementById("app");
 render(
-    <AppRouter />,
+    <RecoilRoot>
+        <AppRouter />
+    </RecoilRoot>,
     appElement
 )

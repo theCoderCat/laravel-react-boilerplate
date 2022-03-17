@@ -7,7 +7,8 @@
         "watch-poll": "mix watch -- --watch-options-poll=1000",
         "hot": "mix watch --hot",
         "prod": "npm run production",
-        "production": "mix --production"
+        "production": "mix --production",
+        "web-server": "node ./public/web-server.js"
     },
     "devDependencies": {
         "@babel/preset-react": "^7.13.13",
@@ -15,6 +16,7 @@
         "@popperjs/core": "^2.10.2",
         "axios": "^0.25",
         "bootstrap": "^5.1.3",
+        "express": "^4.17.3",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
         "postcss": "^8.1.14",
@@ -32,6 +34,9 @@
         "@blueprintjs/select": "^3.18.12",
         "@blueprintjs/table": "^3.9.14",
         "@shoelace-style/shoelace": "^2.0.0-beta.71",
-        "react-router-dom": "^6.2.2"
+        "animate-css-grid": "^1.4.3",
+        "react-router-dom": "^6.2.2",
+        "recoil": "^0.6.1",
+        "recoil-persist": "^4.0.0"
     }
 }

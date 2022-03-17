@@ -1,4 +1,11 @@
+import React from "react";
+import {compactSidebarState} from "../store";
+import {useRecoilState} from "recoil";
 export default function Header() {
+    const [compactSidebar, setCompactSidebar] = useRecoilState(compactSidebarState);
+    const toggleSidebar = function() {
+        setCompactSidebar(!compactSidebar);
+    }
     return (
         <nav className="header navbar navbar-expand-lg navbar-light bg-light">
             <div className="container-fluid">
@@ -21,6 +28,15 @@ export default function Header() {
                     id="navbarSupportedContent"
                 >
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li className="nav-item">
+                            <button
+                                className="btn btn-transparent"
+                                type="button"
+                                onClick={toggleSidebar}
+                            >
+                                <span className="navbar-toggler-icon"></span>
+                            </button>
+                        </li>
                         <li className="nav-item">
                             <a
                                 className="nav-link active"

@@ -55,11 +55,6 @@ export const menu = [
         name: "Example 2",
         icon: "book"
     },
-    {
-        path: "/example-2/smaller-example",
-        name: "Example 3",
-        icon: "book"
-    },
 ]
 
 export default function AppRouter() {
