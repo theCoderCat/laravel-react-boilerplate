@@ -13046,12 +13046,19 @@ textarea.form-control-lg {
 
 #app {
   height: 100vh;
+}
+
+#app-container {
+  height: 100%;
   overflow: hidden;
   display: grid;
   grid-template-columns: 200px 1fr;
   grid-template-rows: 50px 1fr;
   gap: 0px 0px;
   grid-template-areas: "header header" "sidebar content";
+}
+#app-container.compact-sidebar {
+  grid-template-columns: 0px 1fr;
 }
 
 .header {

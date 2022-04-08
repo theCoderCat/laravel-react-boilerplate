@@ -5,6 +5,8 @@ import Example2 from "./Example2";
 import Error404 from "./Error404";
 import Page from "./Page";
 import ChildExample from "./ChildExample";
+import ProjectExplain from "./ProjectExplain";
+import ExampleUserList from "./ExampleUsersList";
 const routes = [
     {
         path: "/",
@@ -13,7 +15,16 @@ const routes = [
         children: [
             {
                 index: true,
-                // path: "",
+                component: ProjectExplain,
+                title: "Project Explain"
+            },
+            {
+                path: "users",
+                component: ExampleUserList,
+                title: "Users"
+            },
+            {
+                path: "example",
                 component: Example,
                 title: "Example"
             },
@@ -47,6 +58,16 @@ const routeWithChildren = (r, parentPath) => {
 export const menu = [
     {
         path: "/",
+        name: "Project Explain",
+        icon: "book"
+    },
+    {
+        path: "/users",
+        name: "Users List",
+        icon: "people"
+    },
+    {
+        path: "/example",
         name: "Example",
         icon: "book"
     },
